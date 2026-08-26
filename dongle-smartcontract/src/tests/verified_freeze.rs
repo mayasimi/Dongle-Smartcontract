@@ -302,6 +302,7 @@ fn verified_project_update_website_allowed() {
             &env,
             "https://newsite.example.com",
         ))),
+        license: None,
         logo_cid: None,
         metadata_cid: None,
         tags: None,

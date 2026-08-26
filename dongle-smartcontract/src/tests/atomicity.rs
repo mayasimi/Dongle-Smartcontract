@@ -153,6 +153,7 @@ fn test_project_update_name_collision_atomicity() {
         description: None,
         category: None,
         website: None,
+        license: None,
         logo_cid: None,
         metadata_cid: None,
         tags: None,
@@ -197,6 +198,7 @@ fn test_project_update_slug_collision_atomicity() {
         description: None,
         category: None,
         website: None,
+        license: None,
         logo_cid: None,
         metadata_cid: None,
         tags: None,
@@ -239,6 +241,7 @@ fn test_project_update_invalid_name_atomicity() {
         description: None,
         category: None,
         website: None,
+        license: None,
         logo_cid: None,
         metadata_cid: None,
         tags: None,
@@ -280,6 +283,7 @@ fn test_project_update_category_change_with_invalid_slug_atomicity() {
         description: None,
         category: Some(String::from_str(&env, "NewCategory")),
         website: None,
+        license: None,
         logo_cid: None,
         metadata_cid: None,
         tags: None,
@@ -328,6 +332,7 @@ fn test_project_update_unauthorized_atomicity() {
         description: None,
         category: None,
         website: None,
+        license: None,
         logo_cid: None,
         metadata_cid: None,
         tags: None,
@@ -391,6 +396,7 @@ fn test_project_update_failed_social_links_keeps_all_indexes_unchanged() {
         description: None,
         category: Some(new_category.clone()),
         website: None,
+        license: None,
         logo_cid: None,
         metadata_cid: None,
         tags: Some(Some(tags)),
@@ -791,6 +797,7 @@ fn test_multiple_operations_fail_independently() {
         description: None,
         category: None,
         website: None,
+        license: None,
         logo_cid: None,
         metadata_cid: None,
         tags: None,
@@ -851,6 +858,7 @@ fn test_project_update_invalid_description_atomicity() {
         description: Some(String::from_str(&env, "")), // Invalid: empty description
         category: None,
         website: None,
+        license: None,
         logo_cid: None,
         metadata_cid: None,
         tags: None,
@@ -892,6 +900,7 @@ fn test_project_update_invalid_category_atomicity() {
         description: None,
         category: Some(String::from_str(&env, "")), // Invalid: empty category
         website: None,
+        license: None,
         logo_cid: None,
         metadata_cid: None,
         tags: None,
@@ -937,6 +946,7 @@ fn test_project_update_invalid_website_atomicity() {
         description: None,
         category: None,
         website: Some(Some(String::from_str(&env, "invalid-website"))), // Invalid: no http/https
+        license: None,
         logo_cid: None,
         metadata_cid: None,
         tags: None,
@@ -980,6 +990,7 @@ fn test_project_update_too_long_description_atomicity() {
         description: Some(long_description),
         category: None,
         website: None,
+        license: None,
         logo_cid: None,
         metadata_cid: None,
         tags: None,
@@ -1307,6 +1318,7 @@ fn test_cross_operation_atomicity_with_partial_failure() {
         description: None,
         category: None,
         website: None,
+        license: None,
         logo_cid: None,
         metadata_cid: None,
         tags: None,
@@ -1348,3 +1360,5 @@ fn test_cross_operation_atomicity_with_partial_failure() {
     assert_eq!(project1_stats_before.review_count, 0);
     assert_eq!(project2_stats_before.review_count, 0);
 }
+
+

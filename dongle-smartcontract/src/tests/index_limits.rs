@@ -61,6 +61,7 @@ fn test_max_projects_per_user_enforced() {
             description: String::from_str(&env, "Too many projects"),
             category: String::from_str(&env, "DeFi"),
             website: None,
+            license: None,
             logo_cid: None,
             metadata_cid: None,
             tags: None,
